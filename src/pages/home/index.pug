@@ -1,14 +1,19 @@
 extends /layout/app
 
 block content
-  .container
-    | CONTENT
-    h1 example block
-    .block-example(style='height: 100px')
-      | Example block
-    h1 example require image
-    img(src='images/square.png' alt='')
-    div(style="background-image: url(${require('images/square3.png')}); height: 100px")
+  .home
+    section.home__introduce
+      include ./introduce/index
 
-    - var img = 'images/square4.png'
-    div(style="background-image: url(${require('" + img + "')}); height: 100px")
+    section.home__advantages
+      include ./advantages/index
+
+    .home__header
+      .home__title feature products
+      .home__subtitle Lorem ipsum dolor sit amet, consectetur adipis cing elit,sed do eiusmod tempor incididunt ut labore et.
+      .home__line
+
+    section.home__gallery
+      include ./gallery/index
+
+

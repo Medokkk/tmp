@@ -1,0 +1,61 @@
+*
+  box-sizing: border-box
+  margin: 0
+
+html
+    height: 100%
+    color: $color_main
+    font-weight: $font_regular
+    font-family: $font_main
+    font-size: 10px
+    &.noscroll
+        overflow: hidden
+
+body
+    height: 100%
+    color: inherit
+    font: inherit
+    text-rendering: optimizeLegibility
+    text-decoration-skip: objects
+    -webkit-text-size-adjust: 100%
+    -webkit-font-smoothing: antialiased
+    -webkit-tap-highlight-color: transparent
+    -moz-osx-font-smoothing: grayscale
+    &.noscroll
+        overflow: hidden
+
+a
+    color: inherit
+    font: inherit
+    text-decoration: none
+    &:focus
+        outline: none
+
+input,
+button,
+select,
+textarea
+  color: inherit
+  font: inherit
+  border: 0
+  &:focus
+      outline: none
+
+button
+    cursor: pointer
+
+ul
+    padding-left: 0
+    margin: 0
+    list-style: none
+
+input[type="search"]
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    &::-webkit-search-cancel-button
+        display: none
+
+    &::-ms-clear
+        display: none
+

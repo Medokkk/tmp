@@ -1,9 +1,9 @@
 import './index.sass';
-// import './index.njk';
 import './index.pug';
-
-import tmpPug from './examplate-inline.tpl.pug';
+import './introduce';
+import './advantages';
+import './gallery';
 
 export default () => {
-  console.log(tmpPug());
+
 };
