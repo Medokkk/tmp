@@ -1,11 +1,10 @@
 .gallery
 
-.gallery__nav
-  padding: 0 150px
 
 .gallery__list
   display: flex
-  justify-content: space-between
+  justify-content: space-around
+  padding: 0 148px
 
   a
     font-size: 22px
@@ -17,3 +16,17 @@
     &:hover
       color: #ff2d2d
       opacity: 1
+
+.gallery__items
+  padding-top: 30px
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+
+.gallery__item
+  width: 300px
+  padding-top: 20px
+
+  img
+    max-width: 100%
+    max-height: 100%
