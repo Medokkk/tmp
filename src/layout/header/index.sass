@@ -1,33 +1,30 @@
 .header
-  background-color: #000000
-  opacity: 0.8
-  max-width: 1250px
-  margin: 0 auto
-  text-align: center
 
 .header__nav
+  background-color: rgba(#000, 0.8)
+  text-align: center
+
+.header__list
   display: inline-block
   padding-right: 50px
 
-.header__list
-  display: flex
+.header__list > li
+  display: inline-block
+  vertical-align: top
 
-  li
+  &:not(:last-child)
+    margin-right: 10px
 
-    &:nth-child(1)
-      margin-right: 19px
-    &:nth-child(2)
-      margin-right: 2px
-    &:nth-child(3)
-      margin-right: 11px
+.header__list > li > a
+  display: block
+  padding: 38px 22px 27px
+  font-weight: $font_bold
+  letter-spacing: 0.5px
+  transition: background-color 0.3s
 
-  a
-    display: block
-    padding: 38px 22px 27px
-    font-weight: $font_bold
-    letter-spacing: 0.5px
-    &:hover
-      background-color: #ff3f40
+  &:hover,
+  &:focus
+    background-color: #ff3f40
 
 .header__link
   font-size: 14px

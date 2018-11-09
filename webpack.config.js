@@ -147,7 +147,14 @@ const config = {
         exclude: [
           path.resolve(__dirname, 'src', 'fonts'),
           path.resolve(__dirname, 'src', 'images'),
+          /inline/i
         ],
+      }, {
+        test: /\.svg$/i,
+        use: [
+          { loader: 'svg-inline-loader' }
+        ],
+        include: [/inline/i]
       }, {
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
         use: [
@@ -159,7 +166,7 @@ const config = {
             },
           },
         ],
-        include: [path.resolve(__dirname, 'src', 'images')],
+        include: [path.resolve(__dirname, 'src', 'images')]
       },
       {
         test: /\.(woff|woff2|eot|ttf|svg)(\?.*$|$)/,

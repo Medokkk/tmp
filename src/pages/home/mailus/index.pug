@@ -1,37 +1,19 @@
 .mailus
-
   .container
-
-    .mailus__title get in touch
-
-    .mailus__description Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.ur
-      |adipis cing elit, sed do eiusmod tempor incididunt ut labore et. ur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.
-
-    .mailus__line
-
-    .mailus__content
-
-      .mailus__form
-
-        input(type="text", placeholder="Name").mailus__input
-
-        input(type="text", placeholder="Your Mail").mailus__input
-
+  .mailus__content
+    .container
+      form.mailus__form
+        .mailus__inputs
+          input(type="text", placeholder="Name" name="name").mailus__input
+          input(type="email", placeholder="Your Mail" name="email").mailus__input
         textarea(placeholder="Type your message").mailus__msg
+        button.mailus__btn Send message
 
-        button.mailus__btn
-          |Send message
-
-      .mailus__info
-
-        h3.mailus__info-title contact info
-
-        p.mailus__info-text Jalalabad 24 / A, Ambaarkhana, Sylhet, Bangladesh
-
-
-        p.mailus__info-text redwan@deviserweb.com
-
-        p.mailus__info-text (+88) 017 617 46373
+    .mailus__info
+      h3.mailus__info-title contact info
+      p.mailus__info-text Jalalabad 24 / A, Ambaarkhana, Sylhet, Bangladesh
+      a(href="mailto:redwan@deviserweb.com").mailus__info-mail redwan@deviserweb.com
+      a(href="tel:(+88) 017 617 46373").mailus__info-number (+88) 017 617 46373
 
 
 

@@ -1,9 +1,9 @@
 .home
 
 .home__header
-  padding-top: 100px
+  padding-top: 92px
   text-align: center
-  padding-bottom: 70px
+  padding-bottom: 83px
 
 .home__title
   opacity: 0.8
@@ -13,7 +13,7 @@
   font-weight: $font-bold
   text-transform: uppercase
   letter-spacing: 0.38px
-  margin-bottom: 20px
+  margin-bottom: 16px
 
 .home__subtitle
   opacity: 0.7
@@ -21,12 +21,38 @@
   font-family: $font_main
   font-size: 16px
   line-height: 28px
-  padding-bottom: 25px
+  padding: 0px 470px
+  padding-bottom: 23px
+  position: relative
 
-.home__line
-  width: 130px
-  height: 3px
-  background-color: #ff2d2d
-  margin: 0 auto
+  &:after
+    content: ""
+    display: block
+    height: 2px
+    width: 130px
+    background-color: $color_theme
+    position: absolute
+    bottom: 0
+    left: 50%
+    transform: translate(-50%)
 
+.home__header--left
+  text-align: left
+  padding-bottom: 0
 
+  .home__title
+    margin-bottom: 30px
+
+  .home__subtitle
+    padding: 0
+    padding-bottom: 48px
+    max-width: 450px
+
+    &:after
+      left: 0
+      transform: translate(0)
+
+.home__header--width
+
+  .home__subtitle
+    max-width: 720px

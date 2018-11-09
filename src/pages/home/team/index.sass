@@ -1,121 +1,105 @@
 .team
-  padding: 100px 0
-
-.team__title
-  opacity: 0.8
-  color: #000000
-  font-family: $font_main
-  font-size: 42px
-  font-weight: $font-bold
-  text-transform: uppercase
-  letter-spacing: 0.38px
-  margin-bottom: 20px
-
-.team__description
-  opacity: 0.7
-  color: #000000
-  font-family: $font_main
-  font-size: 16px
-  line-height: 28px
-  padding-bottom: 25px
-  max-width: 445px
-
-.team__line
-  width: 130px
-  height: 3px
-  background-color: #ff2d2d
+  padding-top: 108px
+  padding-bottom: 104px
 
 .team__content
- padding-top: 70px
-
-.team__left
-  display: inline-block
+  display: flex
+  justify-content: space-between
 
 .team__right
-  display: inline-block
   vertical-align: top
-  margin-left: 70px
-  padding-top: 15px
+  padding-top: 4px
+  flex-basis: 69%
 
 .team__leader-pic
-  width: 320px
-  height: 460px
+  flex-basis: 25.6%
+  padding-top: 36.8%
+  position: relative
 
   img
+    position: absolute
+    top: 0
+    left: 0
     max-width: 100%
+    max-height: 100%
+    width: 100%
     height: 100%
+    object-fit: cover
+    font-family: 'object-fit: cover;'
 
 .team__name
   text-transform: uppercase
-  letter-spacing: 0.28px
+  letter-spacing: 0.3px
   font-size: 30px
   font-family: $font_main
-  color: #000000
+  font-weight: $font_semibold
+  color: #000
   opacity: 0.8
-  margin-bottom: 30px
+  margin-bottom: 20px
 
 .team__info
   opacity: 0.7
-  color: #000000
+  color: #000
   font-family: $font_main
   font-size: 16px
   line-height: 28px
-  margin-bottom: 40px
-  max-width: 630px
+  margin-bottom: 35px
+  max-width: 635px
 
-.team__socials
-
-  li
-    display: inline-block
-    margin-right: 30px
+.team__socials > li
+  display: inline-block
+  margin-right: 30px
 
 .team__link
   opacity: 0.8
-  color: #000000
+  color: #000
   font-family: $font_main
   font-size: 18px
   font-style: italic
   line-height: 24px
+  transition: color 0.3s
+
+  &:hover
+    color: #ff2d2d
+    opacity: 1
 
 .team__members
   margin-top: 65px
+  display: flex
 
 .team__member
   display: inline-block
-  width: 195px
-  height: 215px
+  flex-basis: calc(25% - 15px)
+  padding-top: 19.865%
   position: relative
   margin-right: 15px
+  overflow: hidden
 
-  &::after
-    content: "sokina jue"
-    background-color: #000000
-    opacity: 0.5
-    position: absolute
-    bottom: 20px
-    letter-spacing: 0.17px
-    font-size: 18px
-    color: #ffffff
-    padding: 10px 0
-    width: 100%
-    text-align: center
-    display: none
-
-  &:hover
-
-    &::after
-      display: block
-
-
+  &:hover,
+  &:focus
+    .team__member-name
+      transform: translatey(0)
 
   img
+    position: absolute
+    top: 0
+    left: 0
     max-width: 100%
     max-height: 100%
-
-
-
-
-
-
+    width: 100%
+    height: 100%
+    object-fit: cover
+    font-family: 'object-fit: cover;'
 
 .team__member-name
+  background-color: rgba(#000, 0.5)
+  letter-spacing: 0.17px
+  font-size: 18px
+  color: #fff
+  padding: 10px 0
+  width: 100%
+  text-align: center
+  text-transform: uppercase
+  font-weight: $font_semibold
+  transition: transform 0.5s
+  transform: translatey(45px)

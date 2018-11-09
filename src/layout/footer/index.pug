@@ -3,9 +3,24 @@ footer.footer
 
     .footer__content
 
-      .footer__text © Copyright @Junaed 2016, All rights reserved.
+      p.footer__text © Copyright @Junaed 2016, All rights reserved.
 
-      .footer__links
-         img(src="images/footer/icons.png")
+      ul.footer__links
+
+        li: a.footer__link(href="https://twitter.com/?lang=ru" target="blank")
+          | ${require('layout/footer/twitter-inline.svg')}
+
+        li: a.footer__link(href="https://www.linkedin.com/" target="blank")
+          | ${require('layout/footer/linkedin-inline.svg')}
+
+        li: a.footer__link(href="https://plus.google.com/discover" target="blank")
+          | ${require('layout/footer/google-inline.svg')}
+
+        li: a.footer__link(href="https://www.facebook.com/" target="blank")
+          | ${require('layout/footer/fb-inline.svg')}
+
+
+
+
 
 
