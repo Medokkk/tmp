@@ -4,6 +4,10 @@
   padding-bottom: 138px
   background-size: cover
 
+  +media($tablet)
+    padding-top: 60px
+    padding-bottom: 100px
+
 .mailing__title
   opacity: 0.8
   color: #ffffff
@@ -14,6 +18,13 @@
   text-align: center
   margin-bottom: 22px
 
+  +media($tablet)
+    font-size: 35px
+    margin-bottom: 15px
+
+  +media($mobile_md)
+    font-size: 30px
+
 .mailing__sub
   opacity: 0.8
   color: #ffffff
@@ -23,16 +34,27 @@
   text-align: center
   margin-bottom: 56px
 
+  +media($tablet)
+    margin-bottom: 25px
+
 .mailing__subscribe
   text-align: center
 
 .mailing__input
   width: 520px
-  padding: 30px 30px 30px 30px
+  padding: 30px
   font-size: 16px
   border-radius: 5px
   border: 2px solid transparent
   transition: border-color 0.3s
+
+  +media($tablet)
+    width: 350px
+    padding: 20px
+
+  +media($mobile_md)
+    width: 90%
+    margin-bottom: 20px
 
   &:focus
     border-color: #ff3b3b
@@ -50,7 +72,17 @@
   border: 2px solid #ff3b3b
   transition: color 0.3s, background-color 0.3s
 
+  +media($tablet)
+    padding: 19px 35px
+
+  +media($mobile_sm)
+    padding: 15px 30px
+    font-size: 16px
+
+
   &:hover
     background-color: #ffffff
     color: #ff3b3b
+
+
 

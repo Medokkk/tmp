@@ -2,19 +2,44 @@
   padding-top: 108px
   padding-bottom: 104px
 
+  +media($tablet)
+    padding-top: 70px
+    padding-bottom: 50px
+
+  +media($mobile_md)
+    padding: 40px 0
+
 .team__content
   display: flex
   justify-content: space-between
+
+  +media($mobile_md)
+    flex-direction: column
 
 .team__right
   vertical-align: top
   padding-top: 4px
   flex-basis: 69%
 
+  +media($tablet)
+    flex-basis: 65%
+
+  +media($mobile_lg)
+    flex-basis: 55%
+
 .team__leader-pic
   flex-basis: 25.6%
   padding-top: 36.8%
   position: relative
+
+  +media($tablet)
+    flex-basis: 32%
+
+  +media($mobile_lg)
+    flex-basis: 40%
+
+  +media($mobile_md)
+    padding-top: 100%
 
   img
     position: absolute
@@ -37,6 +62,10 @@
   opacity: 0.8
   margin-bottom: 20px
 
+  +media($mobile_md)
+    font-size: 25px
+    margin-bottom: 5px
+
 .team__info
   opacity: 0.7
   color: #000
@@ -50,6 +79,9 @@
   display: inline-block
   margin-right: 30px
 
+  +media($mobile_sm)
+    margin-right: 10px
+
 .team__link
   opacity: 0.8
   color: #000
@@ -59,6 +91,10 @@
   line-height: 24px
   transition: color 0.3s
 
+  +media($mobile_sm)
+    font-size: 16px
+    line-height: 20px
+
   &:hover
     color: #ff2d2d
     opacity: 1
@@ -66,6 +102,10 @@
 .team__members
   margin-top: 65px
   display: flex
+  flex-wrap: wrap
+
+  +media($mobile_lg)
+    margin-top: 0
 
 .team__member
   display: inline-block
@@ -74,6 +114,18 @@
   position: relative
   margin-right: 15px
   overflow: hidden
+
+  +media($mobile_lg)
+    flex-basis: calc(50% - 15px)
+    padding-top: 30%
+    margin-top: 20px
+
+  +media($mobile_md)
+    padding-top: 40%
+
+  +media($mobile_sm)
+    flex-basis: 100%
+    padding-top: 85%
 
   &:hover,
   &:focus

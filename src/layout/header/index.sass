@@ -4,13 +4,37 @@
   background-color: rgba(#000, 0.8)
   text-align: center
 
+  +media($mobile_sm)
+    min-height: 80px
+
+.header__btn
+  display: none
+  height: 80px
+  width: 50px
+  background-image: url("house.png")
+  background-repeat: no-repeat
+  background-size: contain
+
+
+  +media($mobile_sm)
+    display: block
+
 .header__list
   display: inline-block
   padding-right: 50px
 
+  +media($tablet)
+    padding-right: 0
+
+  +media($mobile_sm)
+    display: none
+
 .header__list > li
   display: inline-block
   vertical-align: top
+
+  +media($mobile_md)
+    margin-right: 0
 
   &:not(:last-child)
     margin-right: 10px
@@ -21,6 +45,9 @@
   font-weight: $font_bold
   letter-spacing: 0.5px
   transition: background-color 0.3s
+
+  +media($mobile_md)
+    padding: 38px 15px 20px
 
   &:hover,
   &:focus

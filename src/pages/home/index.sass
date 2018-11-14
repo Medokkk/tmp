@@ -5,6 +5,10 @@
   text-align: center
   padding-bottom: 83px
 
+  +media($laptop_md)
+    padding-bottom: 70px
+    padding-top: 50px
+
 .home__title
   opacity: 0.8
   color: #000000
@@ -14,6 +18,10 @@
   text-transform: uppercase
   letter-spacing: 0.38px
   margin-bottom: 16px
+
+  +media($tablet)
+    font-size: 35px
+    margin-bottom: 10px
 
 .home__subtitle
   opacity: 0.7
@@ -36,6 +44,10 @@
     left: 50%
     transform: translate(-50%)
 
+  +media($laptop_md)
+    padding: 0
+    padding-bottom: 20px
+
 .home__header--left
   text-align: left
   padding-bottom: 0
@@ -43,10 +55,17 @@
   .home__title
     margin-bottom: 30px
 
+    +media($tablet)
+      margin-bottom: 10px
+
   .home__subtitle
     padding: 0
     padding-bottom: 48px
     max-width: 450px
+
+    +media($tablet)
+      max-width: unset
+      padding-bottom: 20px
 
     &:after
       left: 0
