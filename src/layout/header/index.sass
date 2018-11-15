@@ -10,11 +10,12 @@
 .header__btn
   display: none
   height: 80px
-  width: 50px
+  width: 60px
   background-image: url("house.png")
   background-repeat: no-repeat
-  background-size: contain
-
+  background-size: 50px
+  background-position: 10px
+  cursor: pointer
 
   +media($mobile_sm)
     display: block
@@ -33,11 +34,11 @@
   display: inline-block
   vertical-align: top
 
-  +media($mobile_md)
-    margin-right: 0
-
   &:not(:last-child)
     margin-right: 10px
+
+    +media($mobile_md)
+      margin-right: 0
 
 .header__list > li > a
   display: block
@@ -60,4 +61,22 @@
   text-transform: uppercase
   color: #e0e0e0
 
+.header__nav--open
 
+  .header__list
+    display: flex
+    flex-direction: column
+
+    li
+      margin-right: 0
+      border-bottom: 2px solid #f6f4e2
+      background-color: rgba(0, 0, 0, 0.2)
+
+      &:last-child
+        border-bottom: none
+
+  .header__link
+    padding: 20px 0
+
+  .header__btn
+    background-image: url("cancel.png")
