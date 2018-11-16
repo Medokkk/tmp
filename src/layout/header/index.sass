@@ -3,19 +3,21 @@
 .header__nav
   background-color: rgba(#000, 0.8)
   text-align: center
+  position: relative
+  z-index: 1
+  height: 80px
+  transition-property: height
+  transition-duration: .5s
+  transition-timing-function: linear
 
-  +media($mobile_sm)
-    min-height: 80px
+.header__nav.header__nav--open
+  height: 342px
 
-.header__btn
+.header__place
   display: none
   height: 80px
-  width: 60px
-  background-image: url("house.png")
-  background-repeat: no-repeat
-  background-size: 50px
-  background-position: 10px
-  cursor: pointer
+  width: 100%
+  background-color: #333333
 
   +media($mobile_sm)
     display: block
@@ -23,12 +25,20 @@
 .header__list
   display: inline-block
   padding-right: 50px
+  transition-property: top
+  transition-duration: .5s
+  transition-timing-function: linear
 
   +media($tablet)
     padding-right: 0
 
   +media($mobile_sm)
-    display: none
+    width: 100%
+    position: absolute
+    top: -182px
+    z-index: -1
+    display: flex
+    flex-direction: column
 
 .header__list > li
   display: inline-block
@@ -40,43 +50,88 @@
     +media($mobile_md)
       margin-right: 0
 
+  +media($mobile_sm)
+    margin-right: 0
+    border-bottom: 2px solid #f6f4e2
+    background-color: rgba(0, 0, 0, 0.9)
+
+    &:last-child
+      border-bottom: none
+
 .header__list > li > a
   display: block
   padding: 38px 22px 27px
   font-weight: $font_bold
   letter-spacing: 0.5px
   transition: background-color 0.3s
-
-  +media($mobile_md)
-    padding: 38px 15px 20px
-
-  &:hover,
-  &:focus
-    background-color: #ff3f40
-
-.header__link
   font-size: 14px
   line-height: 24px
   font-family: $font_main
   text-transform: uppercase
   color: #e0e0e0
 
+  +media($mobile_md)
+    padding: 38px 15px 20px
+
+  +media($mobile_sm)
+    padding: 20px 0
+
+  &:hover,
+  &:focus
+    background-color: #ff3f40
+
+.header__trigger
+  cursor: pointer
+  position: relative
+  cursor: pointer
+  width: 40px
+  height: 22px
+  position: absolute
+  left: 20px
+  top: 30px
+
+.header__trigger--line
+  display: inline-block
+  position: relative
+  width: 40px
+  height: 5px
+  background-color: #fff
+  position: relative
+
+  &:before
+    content: ""
+    display: block
+    width: 40px
+    height: 5px
+    position: absolute
+    background-color: #fff
+    transition-property: margin, transform
+    transition-duration: .5s
+    margin-top: -12px
+
+  &:after
+    content: ""
+    display: block
+    width: 40px
+    height: 5px
+    position: absolute
+    background-color: #fff
+    transition-property: margin, transform
+    transition-duration: .5s
+    margin-top: 12px
+
 .header__nav--open
 
   .header__list
-    display: flex
-    flex-direction: column
+    top: 80px
 
-    li
-      margin-right: 0
-      border-bottom: 2px solid #f6f4e2
-      background-color: rgba(0, 0, 0, 0.2)
+  .header__trigger--line
+    background-color: transparent
 
-      &:last-child
-        border-bottom: none
+    &:before
+      transform: rotate(45deg)
+      margin-top: 0
 
-  .header__link
-    padding: 20px 0
-
-  .header__btn
-    background-image: url("cancel.png")
+    &:after
+      transform: rotate(-45deg)
+      margin-top: 0
