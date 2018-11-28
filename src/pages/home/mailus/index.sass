@@ -34,7 +34,7 @@
   border-radius: 5px
   margin-bottom: 40px
   border: 2px solid #fff
-  transition: border-color 0.3s
+  transition: border-color 0.3s, background-color 0.3s
 
   +media($tablet)
     margin-bottom: 20px
@@ -46,6 +46,7 @@
 
   &:focus
     border-color: #ff2d2d
+    background-color: rgba(#E6E6E6, 0.4)
 
 .mailus__msg
   width: 100%
@@ -58,7 +59,7 @@
   padding: 28px 20px 20px 52px
   margin-bottom: 41px
   border: 2px solid #fff
-  transition: border-color 0.3s
+  transition: border-color 0.3s, background-color 0.3s
   resize: none
 
   +media($tablet)
@@ -66,10 +67,11 @@
     margin-bottom: 20px
     padding: 28px 20px 20px 15px
 
+  &:hover
+    background-color: rgba(#E6E6E6, 0.4)
+
   &:focus
     border-color: #ff2d2d
-
-  &:hover
     background-color: rgba(#E6E6E6, 0.4)
 
 .mailus__btn
@@ -107,7 +109,7 @@
     color: #ff3b3b
 
     &:before
-      height: 782%
+      height: 785%
 
 .mailus__info
   width: 38.2%

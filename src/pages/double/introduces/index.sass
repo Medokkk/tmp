@@ -1,0 +1,115 @@
+.introduces
+  background-image: url("introduce-bg.png")
+  background-repeat: no-repeat
+  background-size: cover
+
+.introduces__header
+  display: flex
+  justify-content: space-between
+  padding-top: 60px
+
+.introduces__logo
+  padding-left: 85px
+  position: relative
+
+  &:before
+    content: ""
+    position: absolute
+    top: -18px
+    left: 0
+    width: 83px
+    height: 83px
+    background-image: url("header-logo.png")
+    background-size: cover
+
+.introduces__title
+  font-size: 41px
+  text-transform: uppercase
+  letter-spacing: 0.41px
+  font-style: italic
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.42)
+  color: #fff
+  font-weight: $font_regular
+
+.introduces__author
+  font-size: 13px
+  color: rgba(#fff, 0.77)
+  letter-spacing: 0.13px
+  text-transform: uppercase
+
+.introduces__nav
+
+.introduces__list
+  box-shadow: -5px -5px 0px 0px rgba(245,197,6,0.27), -10px -10px 0px 0px rgba(245,197,6,0.27)
+  display: flex
+
+.introduces__list-item:not(:last-child)
+  border-right: 1px solid rgba(#b99403, 0.1)
+
+.introduces__list-item
+  position: relative
+
+  &:nth-child(1)
+    &:before
+      background-image: url("man-icon.png")
+  &:nth-child(2)
+    &:before
+      background-image: url("setting-icon.png")
+  &:nth-child(3)
+    &:before
+      background-image: url("letter-icon.png")
+  &:before
+    content: ""
+    position: absolute
+    top: 12px
+    left: 40px
+    width: 19px
+    height: 19px
+    background-repeat: no-repeat
+    background-size: contain
+
+.introduces__list-item > a
+  display: block
+  padding: 9px 18px 9px 68px
+  color: #9b7d08
+  font-size: 17px
+  text-transform: uppercase
+  letter-spacing: 0.17px
+  background-color: #f5c506
+  transition: color .3s, background-color .3s
+  &:hover
+    color: #755e03
+    background-color: #fdd32e
+
+.introduces__content
+  display: flex
+  justify-content: space-between
+  padding-top: 55px
+
+.introduces__video
+  width: 560px
+  height: 341px
+  padding: 11px 0 0 10px
+
+  .video__pic
+    width: 100%
+    height: 100%
+    max-width: 100%
+    max-height: 100%
+    object-fit: cover
+
+.introduces__features
+  padding-top: 80px
+
+.introduces__desc
+  font-size: 63px
+  line-height: 65px
+  font-weight: $font_regular
+  text-transform: uppercase
+  letter-spacing: 1px
+  color: #fff
+
+.introduces__desc--yel
+  color: #f5c506
+  text-align: center
+  line-height: normal
